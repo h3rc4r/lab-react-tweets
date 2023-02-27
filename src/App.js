@@ -32,12 +32,35 @@ const tweetsArray = [
     message:
       "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
   },
+
+  {
+    user: {
+      name: "Prueba1",
+      image: "https://picsum.photos/50/50",
+      handle: "prueba",
+    },
+    timestamp: "4h ago",
+    message: "asfasfasdfsdfsadkjfhsdafhskajlhflkjhdfhas"
+  },
+  {
+    user: {
+      name: "Prueba2",
+      image: "https://picsum.photos/50/50",
+      handle: "prueba",
+    },
+    timestamp: "5h ago",
+    message: "asfasfasdfsdfsadkjfhsdafhskajlhflkjhdfhas"
+  },
+
 ];
 
 function App() {
   return (
     <div className="App">
-      <Tweet />
+     
+      {tweetsArray.map((tweet, index) => (
+        <Tweet key={index} tweet={tweet} />
+      ))}
     </div>
   );
 }
